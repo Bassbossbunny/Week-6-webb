@@ -4,9 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image activity</title>
-    
+    <link rel="stylesheet" href="aesthetic.css">
+
 </head>
 <body>
-    
+ <h1>
+    Image optimization & Orientation
+ </h1>   
+
+ <h2>
+    Portrait and Landscape
+ </h2>
+
+ <picture>
+    <!--put your alternatives ABOVE the default image. the size will be linked to the one at default, if set-->
+    <source media="(Orientation:portrait)" srcset="images/calgary-tower-portrait.webp">
+
+<!-- Can put your copyright, creative commons license, or other important details in the "Title" attribute at well-->
+<img src="images/CT-landscape-OP.jpg" 
+alt="calgary tower observation deck, view from under the tower at a steep angle. Clear blue sky in the background" 
+title="Calgary Tower by Dan Stephenson, 2025"
+
+loading="lazy"
+>
+<!-- lazy loading is for when users likely won't be viewing the entire page at a time. don't use for imgs users will guarentee see, like header images and graphics, but for ones like what you see on google img search. -->
+ </picture>
+
+<h2>
+    Desktop first
+</h2>
+<picture>
+    <source media="(max-width:650px)"
+    srcset="./images/small.png">
+
+    <source media="(max-width:800px)"
+    srcset="./images/medium.png">
+
+    <img src="./images/large.png"
+     alt="Desktop banner graphic for site"
+     loading="lazy">
+
+</picture>
 </body>
 </html>
