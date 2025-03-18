@@ -26,6 +26,7 @@ alt="calgary tower observation deck, view from under the tower at a steep angle.
 title="Calgary Tower by Dan Stephenson, 2025"
 
 loading="lazy"
+style="display:block;margin:0 auto;"
 >
 <!-- lazy loading is for when users likely won't be viewing the entire page at a time. don't use for imgs users will guarentee see, like header images and graphics, but for ones like what you see on google img search. -->
  </picture>
@@ -42,8 +43,23 @@ loading="lazy"
 
     <img src="./images/large.png"
      alt="Desktop banner graphic for site"
-     loading="lazy">
+     loading="lazy"
+     style="max-width:100%; height:auto;">
 
 </picture>
+
+<!-- going mobile to desktop now-->
+ <h2>
+    Mobile First
+ </h2>
+
+    <picture>
+    <source media="(min-width:1200px)" srcset="./images/sunglasses-full.webp">
+
+    <source media="(min-width:600px)" srcset="./images/sunglasses-med.webp">
+
+    <img src="./images/sunglasses-small.webp" alt="Sunglasses on a sandy beach" style="max-width: 100%;height: auto;">
+    </picture>
+
 </body>
 </html>
